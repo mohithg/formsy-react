@@ -1,7 +1,9 @@
-formsy-react  [![GitHub release](https://img.shields.io/github/release/christianalfoni/formsy-react.svg)](https://github.com/christianalfoni/formsy-react/releases) [![Build Status](https://travis-ci.org/christianalfoni/formsy-react.svg?branch=master)](https://travis-ci.org/christianalfoni/formsy-react)
-============
+formsy-react-async
+=================
 
-A form input builder and validator for React JS
+Inspired from [Formsy-react](https://github.com/christianalfoni/formsy-react)
+
+A form input builder and validator with support for async validations for React JS
 
 | [How to use](#how-to-use) | [API](/API.md) | [Examples](/examples) |
 |---|---|---|
@@ -29,12 +31,12 @@ You can look at examples in this repo or use the [formsy-react-components](https
 ## Install
 
   1. Download from this REPO and use globally (Formsy) or with requirejs
-  2. Install with `npm install formsy-react` and use with browserify etc.
-  3. Install with `bower install formsy-react`
+  2. Install with `npm install formsy-react-async` and use with browserify etc.
+  3. Install with `bower install formsy-react-async`
 
 ## Changes
 
-[Check out releases](https://github.com/christianalfoni/formsy-react/releases)
+[Check out releases](https://github.com/mohithg/formsy-react/releases)
 
 [Older changes](CHANGES.md)
 
@@ -119,11 +121,23 @@ This code results in a form with a submit button that will run the `submit` meth
 ```
 The form element component is what gives the form validation functionality to whatever you want to put inside this wrapper. You do not have to use traditional inputs, it can be anything you want and the value of the form element can also be anything you want. As you can see it is very flexible, you just have a small API to help you identify the state of the component and set its value.
 
-## Related projects
-- [formsy-material-ui](https://github.com/mbrookes/formsy-material-ui) - A formsy-react compatibility wrapper for [Material-UI](http://material-ui.com/) form components.
-- [formsy-react-components](https://github.com/twisty/formsy-react-components) - A set of React JS components for use in a formsy-react form.
-- ...
-- Send PR for adding your project to this list!
+## Async Validation
+```js
+  
+  Formsy.addValidationRule('asyncCall', async (values, value) => {
+    const isValid = await apicall(value);
+    return isVaild;
+  });
+  
+```
+And use the validation rule in your component as
+
+```jsx
+  <Component 
+    validations="asyncCall"
+    validationError="validation failed"
+  />
+```
 
 ## Contribute
 - Fork repo
@@ -134,5 +148,3 @@ The form element component is what gives the form validation functionality to wh
 ## License
 
 [The MIT License (MIT)](/LICENSE)
-
-Copyright (c) 2014-2016 PatientSky A/S
