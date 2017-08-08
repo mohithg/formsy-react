@@ -8,37 +8,11 @@ A form input builder and validator with support for async validations for React 
 | [How to use](#how-to-use) | [API](/API.md) | [Examples](/examples) |
 |---|---|---|
 
-## <a name="background">Background</a>
-I wrote an article on forms and validation with React JS, [Nailing that validation with React JS](http://christianalfoni.github.io/javascript/2014/10/22/nailing-that-validation-with-reactjs.html), the result of that was this extension.
-
-The main concept is that forms, inputs and validation is done very differently across developers and projects. This extension to React JS aims to be that "sweet spot" between flexibility and reusability.
-
-## What you can do
-
-  1. Build any kind of form element components. Not just traditional inputs, but anything you want and get that validation for free
-
-  2. Add validation rules and use them with simple syntax
-
-  3. Use handlers for different states of your form. Ex. "onSubmit", "onError", "onValid" etc.
-
-  4. Pass external errors to the form to invalidate elements
-
-  5. You can dynamically add form elements to your form and they will register/unregister to the form
-
-## Default elements
-You can look at examples in this repo or use the [formsy-react-components](https://github.com/twisty/formsy-react-components) project to use bootstrap with formsy-react, or use [formsy-material-ui](https://github.com/mbrookes/formsy-material-ui) to use [Material-UI](http://material-ui.com/) with formsy-react.
-
 ## Install
 
   1. Download from this REPO and use globally (Formsy) or with requirejs
   2. Install with `npm install formsy-react-async` and use with browserify etc.
   3. Install with `bower install formsy-react-async`
-
-## Changes
-
-[Check out releases](https://github.com/mohithg/formsy-react/releases)
-
-[Older changes](CHANGES.md)
 
 ## How to use
 
@@ -138,6 +112,9 @@ And use the validation rule in your component as
     validationError="validation failed"
   />
 ```
+
+## Examples
+- For more examples and documentation refer [Formsy-react](https://github.com/christianalfoni/formsy-react)
 
 ## Contribute
 - Fork repo
