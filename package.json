@@ -1,7 +1,7 @@
 {
-  "name": "formsy-react",
-  "version": "0.19.5",
-  "description": "A form input builder and validator for React JS",
+  "name": "formsy-react-async",
+  "version": "1.0.0",
+  "description": "A form input builder and validator with support for async validation for React JS",
   "repository": {
     "type": "git",
     "url": "https://github.com/christianalfoni/formsy-react.git"
@@ -13,7 +13,7 @@
     "examples": "webpack-dev-server --config examples/webpack.config.js --content-base examples",
     "prepublish": "babel ./src/ -d ./lib/"
   },
-  "author": "Christian Alfoni",
+  "author": "Mohith G",
   "license": "MIT",
   "keywords": [
     "react",
