@@ -1,6 +1,6 @@
 {
   "name": "formsy-react-async",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A form input builder and validator with support for async validation for React JS",
   "repository": {
     "type": "git",
